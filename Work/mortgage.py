@@ -15,7 +15,6 @@ while loan_amount > 0:
     if monthly_payment >= extra_payment_start_month and monthly_payment <= extra_payment_end_month:
         loan_amount -= extra_payment_amount
         total_paid += extra_payment_amount
-        break
     print(monthly_payment, round(total_paid, 3), round(loan_amount, 2))
 
 print("Total paid", total_paid)
