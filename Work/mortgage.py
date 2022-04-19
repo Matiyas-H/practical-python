@@ -1,6 +1,3 @@
-from calendar import month
-
-
 loan_amount = 500000.0
 rate = 0.05
 monthly_payment = 2684.11
