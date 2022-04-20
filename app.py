@@ -1,12 +1,9 @@
-import urllib.request
-from xml.etree.ElementTree import parse
-u = urllib.request.urlopen('http://ctabustracker.com/bustime/map/getStopPredictions.jsp?stop=14791&route=22')
-doc = parse(u)
+import os
 
-for pt in doc.findall('.//pt'):
-    print(pt.text)
+full_path = os.path.expanduser("/Work/Data/portfolio.csv")
 
+with open(full_path) as f:
+    data = f.read()
 
 
-
-
+print(data)
