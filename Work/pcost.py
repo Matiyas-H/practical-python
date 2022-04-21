@@ -2,14 +2,17 @@ import csv
 f = open("Data/portfolio.csv")
 rows = csv.reader(f)
 headers = next(f)
+print(headers)
 
 
 def calc_cost(x):
     total_cost = 0
     for row in x:
-        stoke_cost = row[2]
-        total_cost = total_cost + float(stoke_cost)
-    return round(total_cost, 3)
+        no_share = int(row[1])
+        share_cost = float(row[2])
+        total_cost += no_share * share_cost
+
+    return total_cost
 
 
-print("total stoke cost: ", calc_cost(rows))
+print("total cost: ", calc_cost(rows))
